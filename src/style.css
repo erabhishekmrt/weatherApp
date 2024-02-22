@@ -208,4 +208,7 @@
     .header{
         left: 45px;
     }
+    .heightT{
+      height: auto;
+    }
   }
