@@ -1,0 +1,211 @@
+.container {
+    height:100vh;
+   background-image:url('https://media.citizen.co.za/wp-content/uploads/2023/06/Cold-Snap.jpg');
+    background-size:cover;
+   padding: 70px 30px;
+  }
+  .container .header .logo-text
+{
+    color: currentcolor;
+    font-weight: bold;
+    font-size: 24px;
+    outline: auto;
+    padding: 8px;
+}  
+  .header{
+    padding: 40px;
+    position: absolute;
+    top: 0;
+  }
+  .header span{
+    background-color: white;
+  }
+ 
+  .input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .input > .input-text{
+    color: orange;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .input > .input-container{
+    position:relative;
+    margin: 0px 20px;
+  }
+ .input  .input-location{
+    border-radius: 30px;
+    border-color: black;
+    height: 46px;
+    width: 100%;
+    padding: 5px 20px;
+    font-size: 27px;
+    box-sizing: border-box;
+  resize: vertical;
+  
+  }
+  .go-btn{
+    background-color: orange;
+    color: white;
+    font-weight: bold;
+    font-size: 31px;
+    height: 45px;
+    width: 48px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+    top: 0;
+    border-radius: 57px;
+    cursor: pointer;
+  }
+  .drop-cities{
+    background-color: rgb(222, 238, 248);
+    border-radius: 20px;
+    padding: 10px;
+    position: absolute;
+    width: 93%;
+  }
+  .my-loc{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+  }
+  .drop-cities .my-loc img{
+    vertical-align: middle;
+    padding-right:10px
+  }
+  .drop-cities .my-loc span{
+    font-size: 20px;
+  }
+
+  .modal-container{
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-inner{
+    height: 100px;
+    width: 240px;
+    background-color: white;
+    border-radius: 25px;
+    text-align: center;
+    padding: 25px;
+  }
+  .modal-inner button{
+    background-color: red;
+    color: white;
+    border: 1px solid grey;
+    border-radius: 8px;
+    width: 60px;
+    height: 23px;
+    margin-top: 16px;
+    cursor: pointer;
+  }
+
+  .weather-container{
+    background-color: white;
+    padding: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    margin-top: 30px;
+    max-width: 100%;
+  }
+  .weather-container .currentW{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .horizontal-separator{
+    height: 1px;
+    width: 100%;
+    background-color: #d9d9d9;
+    margin: 10px 0px;
+  }
+  .vertical-separator{
+    width: 1px;
+    height: auto;
+    background-color: #d9d9d9;
+    margin: 10px 0px;
+  }
+  .weather-container .weatherIcn{
+    display: flex;
+    align-items: center;
+  }
+  .weather-container .weatherIcn ~ span{
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 23px;
+    display: block;
+    margin-top: -10px;
+
+  }
+  .inner-weather-container{
+    display: flex;
+    justify-content: space-between;
+  }
+  .inner-weather-container .one-col{
+    width: 50%;
+    margin-right: 10px;
+  }
+  .inner-weather-container .two-col{
+    width: 50%;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  .inner-weather-container .weather-data{
+    display: flex;
+    justify-content: space-between;
+  }
+  .weatherIcn.fived img{
+    width: 70px;
+  }
+  .weatherIcn.fived p{
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .fiveDay{
+    text-align: center;
+    max-width: 20px;
+    min-width: 150px;
+    background-color: rgba(135,206,235,0.1);
+    padding: 5px;
+    border-radius: 20px;
+    margin: 10px;
+  }
+  .fiveDayP{
+    display: flex;
+    overflow-x: auto;
+  }
+  .marginLeft{
+    margin-left: 25px;
+  }
+
+  .padT{
+    padding: 0px 30px;
+  }
+  .heightT{
+    height: 100%;
+  }
+  .inline-block{
+    text-wrap: nowrap;
+  }
+  @media Screen and (max-width:1000px){
+    .container{
+        padding-top: 120px;
+    }
+    .header{
+        left: 45px;
+    }
+  }
