@@ -201,11 +201,14 @@
   .inline-block{
     text-wrap: nowrap;
   }
-  @media Screen and (max-width:1000px){
+  @media Screen and (max-width:700px){
     .container{
         padding-top: 120px;
     }
     .header{
         left: 45px;
+    }
+    .heightT{
+      height: auto;
     }
   }

@@ -79,20 +79,22 @@ function App() {
                       arrForcast[index][1] + 1,
                       arrForcast[index][2],
                     ];
-                    if (ind == data.data.list.length - 1) {
-                      arrForcast[index][2] = Math.floor(ind - 4);
+                    if (val.dt_txt.substr(11, 9) == "15:00:00") {
+                      arrForcast[index][2] = Math.floor(ind);
                     }
                   } else {
-                    arrForcast[index][2] = Math.floor(ind - 4);
                     initialDate = val.dt_txt.substr(0, 10);
                     arrForcast.push([0, 1, 0]);
                     index++;
                   }
                 });
-                if (arrForcast.length > 6) {
+
+                if (arrForcast.length > 5) {
                   arrForcast.shift();
                 }
-                console.log(arrForcast);
+                if (arrForcast[4][2] == 0) {
+                  arrForcast[4][2] = 39;
+                }
                 setFiveDaysForcast([data.data.list, arrForcast]);
               })
               .catch((err) => console.log(err));
@@ -283,7 +285,6 @@ function App() {
               {fiveDaysForcast.length ? (
                 <div className="fiveDayP">
                   {fiveDaysForcast[1].map((val) => {
-                    console.log(val);
                     return (
                       <div className="fiveDay">
                         <p>{fiveDaysForcast[0][val[2]].dt_txt.substr(0, 10)}</p>
